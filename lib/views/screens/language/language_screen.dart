@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/common/constants.dart';
-import 'package:flutter_template/l10n/l10n.dart';
-import 'package:flutter_template/models/language_model.dart';
-import 'package:flutter_template/routes/router.dart';
-import 'package:flutter_template/theme/theme_manager.dart';
-import 'package:flutter_template/views/components/body_widget.dart';
-import 'package:flutter_template/views/components/buttons.dart';
-import 'package:flutter_template/views/components/navbar.dart';
-import 'package:flutter_template/views/screens/language/provider/language_provider.dart';
+import 'package:food_facts/common/constants.dart';
+import 'package:food_facts/l10n/l10n.dart';
+import 'package:food_facts/models/language_model.dart';
+import 'package:food_facts/routes/router.dart';
+import 'package:food_facts/theme/theme_manager.dart';
+import 'package:food_facts/views/components/body_widget.dart';
+import 'package:food_facts/views/components/buttons.dart';
+import 'package:food_facts/views/components/navbar.dart';
+import 'package:food_facts/views/screens/language/provider/language_provider.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 

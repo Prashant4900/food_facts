@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template/l10n/l10n.dart';
-import 'package:flutter_template/routes/router.dart';
+import 'package:food_facts/l10n/l10n.dart';
+import 'package:food_facts/routes/router.dart';
 import 'package:go_router/go_router.dart';
 
 class MyDashboard extends StatefulWidget {

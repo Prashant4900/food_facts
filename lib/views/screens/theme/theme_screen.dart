@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/l10n/l10n.dart';
-import 'package:flutter_template/theme/theme_manager.dart';
-import 'package:flutter_template/views/components/navbar.dart';
-import 'package:flutter_template/views/screens/theme/provider/theme_provider.dart';
+import 'package:food_facts/l10n/l10n.dart';
+import 'package:food_facts/theme/theme_manager.dart';
+import 'package:food_facts/views/components/navbar.dart';
+import 'package:food_facts/views/screens/theme/provider/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 class MyThemeScreen extends StatelessWidget {

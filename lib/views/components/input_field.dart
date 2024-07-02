@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/common/constants.dart';
-import 'package:flutter_template/theme/theme_manager.dart';
+import 'package:food_facts/common/constants.dart';
+import 'package:food_facts/theme/theme_manager.dart';
 
 class TextFieldWithLabel extends StatefulWidget {
   const TextFieldWithLabel({

@@ -1,4 +1,4 @@
-import 'package:flutter_template/models/user_model.dart';
+import 'package:food_facts/models/user_model.dart';
 
 class AuthRepository {
   Future<void> login(String email, String password) async {

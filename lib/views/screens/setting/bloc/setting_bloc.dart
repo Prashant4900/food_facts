@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_template/repositories/notification_repository.dart';
-import 'package:flutter_template/setup.dart';
-import 'package:flutter_template/utility/app_logger.dart';
+import 'package:food_facts/repositories/notification_repository.dart';
+import 'package:food_facts/setup.dart';
+import 'package:food_facts/utility/app_logger.dart';
 
 part 'setting_event.dart';
 part 'setting_state.dart';

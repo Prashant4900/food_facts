@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_template/common/constants.dart';
-import 'package:flutter_template/l10n/l10n.dart';
-import 'package:flutter_template/routes/router.dart';
-import 'package:flutter_template/theme/theme_manager.dart';
-import 'package:flutter_template/utility/url_utility.dart';
-import 'package:flutter_template/views/components/body_widget.dart';
-import 'package:flutter_template/views/components/navbar.dart';
-import 'package:flutter_template/views/components/tile_widget.dart';
-import 'package:flutter_template/views/screens/setting/bloc/setting_bloc.dart';
+import 'package:food_facts/common/constants.dart';
+import 'package:food_facts/l10n/l10n.dart';
+import 'package:food_facts/routes/router.dart';
+import 'package:food_facts/theme/theme_manager.dart';
+import 'package:food_facts/utility/url_utility.dart';
+import 'package:food_facts/views/components/body_widget.dart';
+import 'package:food_facts/views/components/navbar.dart';
+import 'package:food_facts/views/components/tile_widget.dart';
+import 'package:food_facts/views/screens/setting/bloc/setting_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class MySettingPage extends StatefulWidget {

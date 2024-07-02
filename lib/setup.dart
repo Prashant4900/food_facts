@@ -1,5 +1,5 @@
-import 'package:flutter_template/repositories/auth_repository.dart';
-import 'package:flutter_template/repositories/notification_repository.dart';
+import 'package:food_facts/repositories/auth_repository.dart';
+import 'package:food_facts/repositories/notification_repository.dart';
 import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;

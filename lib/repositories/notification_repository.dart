@@ -1,4 +1,4 @@
-import 'package:flutter_template/utility/app_logger.dart';
+import 'package:food_facts/utility/app_logger.dart';
 
 class NotificationRepository {
   Future<void> enableNotification() async {

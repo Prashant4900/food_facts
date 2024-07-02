@@ -1,4 +1,4 @@
-# flutter_template
+# food_facts
 
 A new Flutter project.
 

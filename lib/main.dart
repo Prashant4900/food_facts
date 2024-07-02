@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:flutter_template/app/app.dart';
-import 'package:flutter_template/services/app_pref.dart';
-import 'package:flutter_template/setup.dart';
-import 'package:flutter_template/utility/app_logger.dart';
+import 'package:food_facts/app/app.dart';
+import 'package:food_facts/services/app_pref.dart';
+import 'package:food_facts/setup.dart';
+import 'package:food_facts/utility/app_logger.dart';
 
 Future<void> main() async {
   await runZonedGuarded(

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/common/constants.dart';
-import 'package:flutter_template/gen/assets.gen.dart';
-import 'package:flutter_template/l10n/l10n.dart';
-import 'package:flutter_template/routes/router.dart';
-import 'package:flutter_template/theme/theme_manager.dart';
-import 'package:flutter_template/views/components/buttons.dart';
+import 'package:food_facts/common/constants.dart';
+import 'package:food_facts/gen/assets.gen.dart';
+import 'package:food_facts/l10n/l10n.dart';
+import 'package:food_facts/routes/router.dart';
+import 'package:food_facts/theme/theme_manager.dart';
+import 'package:food_facts/views/components/buttons.dart';
 import 'package:go_router/go_router.dart';
 
 class MyOnboardingScreen extends StatefulWidget {

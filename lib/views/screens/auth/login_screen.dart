@@ -1,16 +1,15 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_template/common/constants.dart';
-import 'package:flutter_template/gen/assets.gen.dart';
-import 'package:flutter_template/l10n/l10n.dart';
-import 'package:flutter_template/routes/router.dart';
-import 'package:flutter_template/theme/theme_manager.dart';
-import 'package:flutter_template/views/components/body_widget.dart';
-import 'package:flutter_template/views/components/buttons.dart';
-import 'package:flutter_template/views/components/input_field.dart';
-import 'package:flutter_template/views/components/navbar.dart';
-import 'package:flutter_template/views/screens/auth/bloc/auth_bloc.dart';
+import 'package:food_facts/common/constants.dart';
+import 'package:food_facts/gen/assets.gen.dart';
+import 'package:food_facts/l10n/l10n.dart';
+import 'package:food_facts/routes/router.dart';
+import 'package:food_facts/theme/theme_manager.dart';
+import 'package:food_facts/views/components/body_widget.dart';
+import 'package:food_facts/views/components/buttons.dart';
+import 'package:food_facts/views/components/input_field.dart';
+import 'package:food_facts/views/components/navbar.dart';
+import 'package:food_facts/views/screens/auth/bloc/auth_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class MyLoginScreen extends StatelessWidget {
@@ -50,27 +49,12 @@ class MyLoginScreen extends StatelessWidget {
                     hintText: context.lang.enterPassword,
                     isSecret: true,
                   ),
-                  Align(
-                    alignment: AlignmentDirectional.centerEnd,
-                    child: TextButton(
-                      onPressed: () =>
-                          context.push(MyRoutes.forgotPasswordScreen),
-                      child: Text(
-                        context.lang.forgotPassword,
-                        style: context.bodySmall,
-                      ),
-                    ),
-                  ),
                   const Spacer(flex: 3),
                   CustomElevatedButton(
                     label: context.lang.login,
                     onPressed: () => context.pushReplacement(MyRoutes.home),
                   ),
                   verticalMargin20,
-                  CustomElevatedButton(
-                    label: context.lang.continueWithPhone,
-                    onPressed: () => context.push(MyRoutes.phoneScreen),
-                  ),
                   verticalMargin24,
                   Column(
                     children: [
@@ -100,25 +84,6 @@ class MyLoginScreen extends StatelessWidget {
                         ],
                       ),
                     ],
-                  ),
-                  const Spacer(),
-                  RichText(
-                    text: TextSpan(
-                      style: context.bodySmall,
-                      children: [
-                        TextSpan(
-                          text: context.lang.ifYouDontHaveAccount,
-                        ),
-                        TextSpan(
-                          text: context.lang.register,
-                          style: context.labelSmall?.copyWith(
-                            color: context.primary,
-                          ),
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () => context.push(MyRoutes.signUpScreen),
-                        ),
-                      ],
-                    ),
                   ),
                   verticalMargin24,
                 ],

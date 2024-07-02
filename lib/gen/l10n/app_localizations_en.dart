@@ -8,7 +8,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get helloWorld => 'Hello, World!';
 
   @override
-  String get appName => 'Custom Flutter Template';
+  String get appName => 'Custom Food Facts';
 
   @override
   String get selectLanguage => 'Select Language';

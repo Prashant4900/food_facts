@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_template/models/user_model.dart';
-import 'package:flutter_template/repositories/auth_repository.dart';
-import 'package:flutter_template/setup.dart';
+import 'package:food_facts/models/user_model.dart';
+import 'package:food_facts/repositories/auth_repository.dart';
+import 'package:food_facts/setup.dart';
 
 part 'auth_event.dart';
 part 'auth_state.dart';

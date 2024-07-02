@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/gen/l10n/app_localizations.dart';
+import 'package:food_facts/gen/l10n/app_localizations.dart';
 
 enum AppLocale {
   english('en'),

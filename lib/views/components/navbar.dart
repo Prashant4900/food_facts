@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/common/constants.dart';
+import 'package:food_facts/common/constants.dart';
 
 AppBar headerNav(
   BuildContext context, {

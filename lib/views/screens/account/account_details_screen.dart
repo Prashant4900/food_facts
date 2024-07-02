@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template/l10n/l10n.dart';
-import 'package:flutter_template/views/components/navbar.dart';
+import 'package:food_facts/l10n/l10n.dart';
+import 'package:food_facts/views/components/navbar.dart';
 
 class MyAccountDetailScreen extends StatelessWidget {
   const MyAccountDetailScreen({super.key});

@@ -1,4 +1,4 @@
-import 'package:flutter_template/utility/app_logger.dart';
+import 'package:food_facts/utility/app_logger.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class UrlUtility {

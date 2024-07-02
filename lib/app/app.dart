@@ -3,13 +3,13 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:flutter_template/gen/l10n/app_localizations.dart';
-import 'package:flutter_template/l10n/l10n.dart';
-import 'package:flutter_template/routes/router.dart';
-import 'package:flutter_template/theme/theme_manager.dart';
-import 'package:flutter_template/views/screens/language/provider/language_provider.dart';
-import 'package:flutter_template/views/screens/setting/bloc/setting_bloc.dart';
-import 'package:flutter_template/views/screens/theme/provider/theme_provider.dart';
+import 'package:food_facts/gen/l10n/app_localizations.dart';
+import 'package:food_facts/l10n/l10n.dart';
+import 'package:food_facts/routes/router.dart';
+import 'package:food_facts/theme/theme_manager.dart';
+import 'package:food_facts/views/screens/language/provider/language_provider.dart';
+import 'package:food_facts/views/screens/setting/bloc/setting_bloc.dart';
+import 'package:food_facts/views/screens/theme/provider/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 class MyApp extends StatefulWidget {
@@ -46,7 +46,7 @@ class _MyAppState extends State<MyApp> {
           return Consumer<LanguageProvider>(
             builder: (context, languageProvider, _) {
               return MaterialApp.router(
-                title: 'Flutter Template',
+                title: 'Food Facts',
                 theme: appTheme(
                   context,
                   colorScheme: lightColorScheme,

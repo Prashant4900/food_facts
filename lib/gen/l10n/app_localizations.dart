@@ -112,7 +112,7 @@ abstract class AppLocalizations {
   /// No description provided for @appName.
   ///
   /// In en, this message translates to:
-  /// **'Custom Flutter Template'**
+  /// **'Custom Food Facts'**
   String get appName;
 
   /// No description provided for @selectLanguage.
