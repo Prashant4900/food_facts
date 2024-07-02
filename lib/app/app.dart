@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:food_facts/gen/l10n/app_localizations.dart';
 import 'package:food_facts/l10n/l10n.dart';
 import 'package:food_facts/routes/router.dart';
@@ -23,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     // Remove Splash Screen
-    FlutterNativeSplash.remove();
+    // FlutterNativeSplash.remove();
     super.initState();
   }
 

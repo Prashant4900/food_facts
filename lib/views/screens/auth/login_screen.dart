@@ -49,7 +49,7 @@ class MyLoginScreen extends StatelessWidget {
                     hintText: context.lang.enterPassword,
                     isSecret: true,
                   ),
-                  Spacer(flex: 3),
+                  const Spacer(flex: 3),
                   CustomElevatedButton(
                     label: context.lang.login,
                     onPressed: () => context.pushReplacement(MyRoutes.home),

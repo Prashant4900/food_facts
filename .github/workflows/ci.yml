@@ -36,8 +36,8 @@ jobs:
       #   run: dart format --output=none --set-exit-if-changed .
 
       # Consider passing '--fatal-infos' for slightly stricter analysis.
-      # - name: Analyze project source
-      #   run: flutter analyze
+      - name: Analyze project source
+        run: flutter analyze
 
       # Fixing code changes
       - name: Fixing code
@@ -49,8 +49,8 @@ jobs:
       # - name: Run tests
       #   run: flutter test
 
-      - name: Generate android build
-        run: flutter build apk --release --split-per-abi
+      # - name: Generate android build
+      #   run: flutter build apk --release --split-per-abi
 
       - name: Generate ios build
         run: |
