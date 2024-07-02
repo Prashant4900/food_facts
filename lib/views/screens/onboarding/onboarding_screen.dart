@@ -163,11 +163,6 @@ class OnboardingPage extends StatelessWidget {
               : 140,
           fit: BoxFit.fill,
         ),
-        Text(
-          (MediaQuery.of(context).size.height /
-                  MediaQuery.of(context).size.width)
-              .toString(),
-        ),
         verticalMargin24,
         Padding(
           padding: horizontalPadding16,

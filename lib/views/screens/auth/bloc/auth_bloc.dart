@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:food_facts/models/user_model.dart';
 import 'package:food_facts/repositories/auth_repository.dart';
 import 'package:food_facts/setup.dart';
 
@@ -12,52 +11,10 @@ part 'auth_state.dart';
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   AuthBloc() : super(AuthInitial()) {
     on<GoogleLoginEvent>(_googleLogin);
-    on<AppleLoginEvent>(_appleLogin);
-    on<FacebookLoginEvent>(_facebookLogin);
-    on<LoginEvent>(_loginLogin);
-    on<RegisterEvent>(_registerLogin);
+    on<SignOutEvent>(_signOutLogin);
   }
 
   final authRepo = getIt<AuthRepository>();
-
-  FutureOr<void> _loginLogin(
-    LoginEvent event,
-    Emitter<AuthState> emit,
-  ) async {
-    emit(AuthLoading());
-    try {
-      await authRepo.login(event.email, event.password);
-      emit(AuthSuccess());
-    } catch (e) {
-      emit(AuthFailure(message: e.toString()));
-    }
-  }
-
-  FutureOr<void> _registerLogin(
-    RegisterEvent event,
-    Emitter<AuthState> emit,
-  ) async {
-    emit(AuthLoading());
-    try {
-      await authRepo.register(event.userModel);
-      emit(AuthSuccess());
-    } catch (e) {
-      emit(AuthFailure(message: e.toString()));
-    }
-  }
-
-  FutureOr<void> _facebookLogin(
-    FacebookLoginEvent event,
-    Emitter<AuthState> emit,
-  ) async {
-    emit(AuthLoading());
-    try {
-      await authRepo.facebookSignIn();
-      emit(AuthSuccess());
-    } catch (e) {
-      emit(AuthFailure(message: e.toString()));
-    }
-  }
 
   FutureOr<void> _googleLogin(
     GoogleLoginEvent event,
@@ -66,20 +23,20 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     emit(AuthLoading());
     try {
       await authRepo.googleSignIn();
-      emit(AuthSuccess());
+      emit(const AuthSuccess(isLoggedIn: true));
     } catch (e) {
       emit(AuthFailure(message: e.toString()));
     }
   }
 
-  FutureOr<void> _appleLogin(
-    AppleLoginEvent event,
+  FutureOr<void> _signOutLogin(
+    SignOutEvent event,
     Emitter<AuthState> emit,
   ) async {
     emit(AuthLoading());
     try {
-      await authRepo.appleSignIn();
-      emit(AuthSuccess());
+      await authRepo.signOut();
+      emit(const AuthSuccess());
     } catch (e) {
       emit(AuthFailure(message: e.toString()));
     }

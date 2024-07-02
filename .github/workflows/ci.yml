@@ -19,6 +19,12 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v4
 
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '12'
+
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -49,8 +55,8 @@ jobs:
       # - name: Run tests
       #   run: flutter test
 
-      # - name: Generate android build
-      #   run: flutter build apk --release --split-per-abi
+      - name: Generate android build
+        run: flutter build apk --release --split-per-abi
 
       - name: Generate ios build
         run: |

@@ -1,5 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:food_facts/repositories/auth_repository.dart';
+import 'package:food_facts/setup.dart';
 import 'package:food_facts/views/screens/account/account_details_screen.dart';
 import 'package:food_facts/views/screens/auth/login_screen.dart';
 import 'package:food_facts/views/screens/dashboard.dart';
@@ -25,10 +29,43 @@ class MyRoutes {
   static const accountDetailScreen = '/accountDetail';
 }
 
+FutureOr<String?> _routeRedirect(
+  BuildContext context,
+  GoRouterState state,
+) async {
+  final isAuthenticated = await getIt<AuthRepository>().isUserAuth();
+  final location = state.matchedLocation;
+
+  bool isLogoutOnlyScreen(String location) {
+    return location == MyRoutes.onboardingScreen ||
+        location == MyRoutes.logInScreen;
+  }
+
+  bool isLoginOnlyScreen(String location) {
+    return [
+      MyRoutes.home,
+      MyRoutes.settingScreen,
+      MyRoutes.notificationScreen,
+      MyRoutes.accountDetailScreen,
+      MyRoutes.themeScreen,
+    ].contains(location);
+  }
+
+  if (!isAuthenticated && isLoginOnlyScreen(location)) {
+    return MyRoutes.languageScreen;
+  }
+
+  if (isAuthenticated && isLogoutOnlyScreen(location)) {
+    return MyRoutes.home;
+  }
+
+  return null; // No redirection needed
+}
+
 final routerConfig = GoRouter(
-  initialLocation: MyRoutes.languageScreen,
   navigatorKey: _rootNavigatorKey,
   debugLogDiagnostics: kDebugMode,
+  redirect: _routeRedirect,
   routes: [
     GoRoute(
       parentNavigatorKey: _rootNavigatorKey,
@@ -79,7 +116,4 @@ final routerConfig = GoRouter(
       ],
     ),
   ],
-  redirect: (context, state) {
-    return null;
-  },
 );

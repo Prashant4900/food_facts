@@ -7,10 +7,9 @@ import 'package:food_facts/routes/router.dart';
 import 'package:food_facts/theme/theme_manager.dart';
 import 'package:food_facts/views/components/body_widget.dart';
 import 'package:food_facts/views/components/buttons.dart';
-import 'package:food_facts/views/components/input_field.dart';
-import 'package:food_facts/views/components/navbar.dart';
 import 'package:food_facts/views/screens/auth/bloc/auth_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:vector_graphics/vector_graphics.dart';
 
 class MyLoginScreen extends StatelessWidget {
   const MyLoginScreen({super.key});
@@ -35,55 +34,54 @@ class MyLoginScreen extends StatelessWidget {
         },
         builder: (context, state) {
           return Scaffold(
-            appBar: headerNav(context, title: context.lang.welcomeBack),
             body: BodyWidget(
               child: Column(
                 children: [
-                  TextFieldWithLabel(
-                    label: context.lang.email,
-                    hintText: context.lang.enterEmail,
+                  verticalMargin32,
+                  VectorGraphic(
+                    loader: AssetBytesLoader(
+                      Assets.svg.icon.path,
+                    ),
+                    width: 120,
                   ),
-                  verticalMargin24,
-                  TextFieldWithLabel(
-                    label: context.lang.password,
-                    hintText: context.lang.enterPassword,
-                    isSecret: true,
+                  verticalMargin12,
+                  Text(
+                    context.lang.appName,
+                    style: context.headlineMedium!
+                        .copyWith(fontWeight: FontWeight.w500),
+                  ),
+                  Text(
+                    'Ab Scan Karega India',
+                    style: context.bodySmall,
                   ),
                   const Spacer(flex: 3),
-                  CustomElevatedButton(
-                    label: context.lang.login,
-                    onPressed: () => context.pushReplacement(MyRoutes.home),
+                  RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                      style: context.bodySmall,
+                      children: const [
+                        TextSpan(text: 'By continue I agree to the '),
+                        TextSpan(
+                          text: 'term & conditions',
+                          style: TextStyle(
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
+                        TextSpan(text: ' and '),
+                        TextSpan(
+                          text: 'privacy policy',
+                          style: TextStyle(
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  verticalMargin20,
-                  verticalMargin24,
-                  Column(
-                    children: [
-                      Text(
-                        context.lang.loginWithSocial,
-                        style: context.bodyMedium,
-                      ),
-                      verticalMargin8,
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          IconButton(
-                            onPressed: () =>
-                                context.pushReplacement(MyRoutes.home),
-                            icon: Assets.svg.google.svg(width: 32),
-                          ),
-                          IconButton(
-                            onPressed: () =>
-                                context.pushReplacement(MyRoutes.home),
-                            icon: Assets.svg.apple.svg(width: 32),
-                          ),
-                          IconButton(
-                            onPressed: () =>
-                                context.pushReplacement(MyRoutes.home),
-                            icon: Assets.svg.facebook.svg(width: 32),
-                          ),
-                        ],
-                      ),
-                    ],
+                  verticalMargin12,
+                  CustomElevatedButton(
+                    label: context.lang.loginWithGoogle,
+                    onPressed: () =>
+                        context.read<AuthBloc>().add(GoogleLoginEvent()),
                   ),
                   verticalMargin24,
                 ],

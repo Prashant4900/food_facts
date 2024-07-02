@@ -5,7 +5,7 @@
         "type": "text",
         "description": "A hello world message"
     },
-    "appName": "Custom Food Facts",
+    "appName": "Food Facts",
     "selectLanguage": "Select Language",
     "language": "English",
     "login": "Login",

@@ -16,10 +16,10 @@ class AppLogger {
     }
   }
 
-  static void info(String message, {String name = ''}) {
+  static void info(Object message, {String name = ''}) {
     if (kDebugMode) {
       log(
-        message,
+        '$message',
         time: DateTime.now(),
         name: name,
       );

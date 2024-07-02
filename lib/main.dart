@@ -1,8 +1,10 @@
 import 'dart:async';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:food_facts/app/app.dart';
+import 'package:food_facts/firebase_options.dart';
 import 'package:food_facts/services/app_pref.dart';
 import 'package:food_facts/setup.dart';
 import 'package:food_facts/utility/app_logger.dart';
@@ -14,6 +16,11 @@ Future<void> main() async {
 
       // Initialize Splash Screen
       FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+
+      // Initialize Firebase
+      await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      );
 
       // Initialize Shared Preferences
       await AppPref.init();

@@ -13,7 +13,7 @@
 		<key>CFBundleInfoDictionaryVersion</key>
 		<string>6.0</string>
 		<key>CFBundleName</key>
-		<string>food_facts</string>
+		<string>Food Facts</string>
 		<key>CFBundlePackageType</key>
 		<string>APPL</string>
 		<key>CFBundleShortVersionString</key>
@@ -47,5 +47,21 @@
 		<true/>
 		<key>UIStatusBarHidden</key>
 		<false/>
+
+		<!-- Google Auth Start-->
+		<key>CFBundleURLTypes</key>
+		<array>
+			<dict>
+				<key>CFBundleTypeRole</key>
+				<string>Editor</string>
+				<key>CFBundleURLSchemes</key>
+				<array>
+					<string>com.googleusercontent.apps.856877918512-om72rkon7b4rkeiqcgrd9o0f9e92orce</string>
+				</array>
+			</dict>
+		</array>
+		<key>GIDClientID</key>
+		<string>856877918512-om72rkon7b4rkeiqcgrd9o0f9e92orce.apps.googleusercontent.com</string>
+		<!-- Google Auth End-->
 	</dict>
 </plist>
